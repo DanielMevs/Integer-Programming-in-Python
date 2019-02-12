@@ -1,4 +1,8 @@
 import math
+"""
+Daniel Mevs
+HW 5
+"""
 
 def f(x,y):
     return(((x-1)**2)-(4*(x-1)*(y-3))+(5*((y-3)**2)) - 841)
@@ -6,10 +10,12 @@ def f(x,y):
 def main():
     acc = []
     roots = []
-    min_x = -21
-    max_x = -61
+    
+    min_x = -61
+    max_x = -21
     min_y = -26
     max_y = 3
+    
     farthest_pnt = (-21, 0)
     farthest_dist = sum([i**2 for i in farthest_pnt])**(1/2)
     closest_pnt = (-61, -27)
@@ -18,8 +24,8 @@ def main():
     closest_r_dist = 5000
 
 
-    for i in range(-61,-20):
-        for j in range(-26,4):
+    for i in range(-1600,800):
+        for j in range(-1600,800):
             z=f(i,j)
             if(z<=0):
                 acc+=[(i,j)]
